@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Free Quote | Rabbit&#x27;s Premier Property Care</title>
+  <meta name="description" content="Request a free estimate for lawn care, lighting, pressure washing, painting, drywall, or hardscaping. Commercial properties receive an on-site assessment and custom quote." />
+  <meta name="theme-color" content="#0f2419" />
+  <link rel="canonical" href="https://rabbits-premier.com/quote.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rabbits-premier.com/quote.html" />
+  <meta property="og:title" content="Request a Free Quote | Rabbit&#x27;s Premier Property Care" />
+  <meta property="og:description" content="Request a free estimate for lawn care, lighting, pressure washing, painting, drywall, or hardscaping. Commercial properties receive an on-site assessment and custom quote." />
+  <meta property="og:image" content="https://rabbits-premier.com/img/crest.png" />
+  <link rel="icon" type="image/png" href="img/favicon-64.png" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Rabbit's Premier Property Care home">
+      <img src="img/crest-256.png" alt="" width="44" height="44" />
+      <span>Rabbit's Premier<small>Property Care</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="about.html">About</a>
+      <a href="service-areas.html">Service Areas</a>
+      <a href="policies.html">Policies</a>
+      <a class="btn btn-gold" href="quote.html">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Request a Quote</p>
+      <h1>Free estimates, <em>no guesswork.</em></h1>
+      <p>Tell us about your property and what you need. Prefer to talk? Call or text <a href="tel:+17574102347" style="color:var(--gold-soft)">757-410-2347</a> or email <a href="mailto:rabbits.premier@gmail.com" style="color:var(--gold-soft)">rabbits.premier@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:56px">
+    <div class="wrap">
+      <form class="form-card" id="quote-form" novalidate>
+        <div class="form-grid">
+          <fieldset class="field full">
+            <legend>Property type</legend>
+            <div class="seg">
+              <label><input type="radio" name="property" value="Residential" checked /><span>Residential home</span></label>
+              <label><input type="radio" name="property" value="Commercial" /><span>Commercial property</span></label>
+              <label><input type="radio" name="property" value="Property management" /><span>Property management</span></label>
+            </div>
+            <div class="callout commercial" id="commercial-note" hidden style="margin-top:12px">
+              <strong>Commercial &amp; property-management requests</strong> start with an on-site assessment and a custom quote. Published prices on this site apply to residential work only.
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="q-name">Your name</label>
+            <input type="text" id="q-name" name="name" autocomplete="name" required />
+          </div>
+          <fieldset class="field">
+            <legend>Preferred contact method</legend>
+            <div class="seg">
+              <label><input type="radio" name="contact" value="Call" checked /><span>Call</span></label>
+              <label><input type="radio" name="contact" value="Text" /><span>Text</span></label>
+              <label><input type="radio" name="contact" value="Email" /><span>Email</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="q-phone">Phone</label>
+            <input type="tel" id="q-phone" name="phone" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="q-email">Email</label>
+            <input type="email" id="q-email" name="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="q-address">Property address</label>
+            <input type="text" id="q-address" name="address" autocomplete="street-address" required />
+          </div>
+          <div class="field">
+            <label for="q-city">City</label>
+            <select id="q-city" name="city" required>
+              <option value="">Choose a city</option>
+              <option>Portsmouth</option>
+              <option>Norfolk</option>
+              <option>Chesapeake</option>
+              <option>Virginia Beach</option>
+              <option>Suffolk</option>
+              <option value="Other (please confirm coverage)">Other — ask about coverage</option>
+            </select>
+          </div>
+
+          <fieldset class="field full">
+            <legend>Services you're interested in</legend>
+            <div class="seg">
+              <label><input type="checkbox" name="services" value="Lawn care" /><span>Lawn care &amp; yard cleanup</span></label>
+              <label><input type="checkbox" name="services" value="Lighting" /><span>Seasonal / decorative lighting</span></label>
+              <label><input type="checkbox" name="services" value="Pressure washing" /><span>Pressure washing</span></label>
+              <label><input type="checkbox" name="services" value="Painting" /><span>Painting</span></label>
+              <label><input type="checkbox" name="services" value="Drywall" /><span>Drywall</span></label>
+              <label><input type="checkbox" name="services" value="Hardscaping" /><span>Hardscaping</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field full">
+            <label for="q-scope">Brief description of the work</label>
+            <textarea id="q-scope" name="scope" placeholder="Example: weekly mowing for a corner lot, plus pruning six front shrubs with haul-away." required></textarea>
+            <p class="hint">Photos help. After you press send, attach them to the email or text that opens.</p>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-gold" type="submit">Send by email</button>
+          <button class="btn btn-line" type="button" id="send-text">Send by text</button>
+          <span class="form-status" id="form-status" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brandline"><img src="img/crest-256.png" alt="Rabbit's Premier Property Care crest" width="56" height="56" />Rabbit's Premier Property Care</div>
+        <p>Owner-operated property care for homeowners in Portsmouth, Norfolk, Chesapeake, Virginia Beach, and Suffolk, Virginia. Commercial properties by on-site assessment.</p>
+        <p style="margin-top:10px"><strong style="color:var(--gold-soft)">Insured</strong> · Free estimates</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Owner: Billy C. Hernandez</li>
+          <li><a href="tel:+17574102347">Call or text: 757-410-2347</a></li>
+          <li><a href="mailto:rabbits.premier@gmail.com">rabbits.premier@gmail.com</a></li>
+          <li>900 Commonwealth Pl, Suite 200<br />Virginia Beach, VA 23464</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Every day</li>
+          <li>6 a.m.–6 p.m. Eastern</li>
+        </ul>
+        <h3 style="margin-top:18px">We accept</h3>
+        <p>Cash, Cash App, Venmo, PayPal, card, check</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="services.html#faq">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="quote.html?type=commercial">Commercial quotes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Rabbit's Premier Property Care. Published prices are for residential work.</span>
+      <span>Work is performed on-site at your property.</span>
+    </div>
+  </div>
+</footer>
+<nav class="callbar" aria-label="Quick contact">
+  <a href="tel:+17574102347">Call</a>
+  <a href="sms:+17574102347">Text</a>
+  <a class="q" href="quote.html">Free quote</a>
+</nav>
+<script src="site.js"></script>
+</body>
+</html>

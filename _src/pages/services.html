@@ -1,0 +1,252 @@
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Services &amp; Pricing</p>
+      <h1>Residential prices, <em>published in full.</em></h1>
+      <p>Every price below applies to residential work, with its units, minimums, and what's included listed beside it. Estimates are free. Commercial and property-management work requires an on-site assessment and a custom quote.</p>
+      <div class="jump">
+        <a href="#lawn">Lawn &amp; yard</a>
+        <a href="#lighting">Lighting</a>
+        <a href="#pressure-washing">Pressure washing</a>
+        <a href="#painting">Painting</a>
+        <a href="#drywall">Drywall</a>
+        <a href="#hardscaping">Hardscaping</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Lawn -->
+  <section class="price-section" id="lawn" aria-labelledby="lawn-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">01</p><h2 id="lawn-title">Lawn care &amp; yard cleanup</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Lawn%20care">Quote lawn care</a>
+      </div>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th scope="col">Residential service</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Routine lawn maintenance: mowing, edging, and lawn trimming</th><td class="price">$75 per visit<small>For most average properties; size-dependent</small></td></tr>
+            <tr><th scope="row">Overgrown lawn: grass 6 inches or higher</th><td class="price">+50% of the normal visit price<small>A $75 visit becomes $112.50</small></td></tr>
+            <tr><th scope="row">Shrub and hedge pruning</th><td class="price">Starting at $50<small>Based on number of bushes</small></td></tr>
+            <tr><th scope="row">Haul away pruning clippings</th><td class="price">$25 additional</td></tr>
+            <tr><th scope="row">Leaf cleanup: raking/blowing and bagging</th><td class="price">Starting at $150 per visit</td></tr>
+            <tr><th scope="row">Leaf and other yard-waste hauling</th><td class="price">Separate quote<small>Based on volume</small></td></tr>
+            <tr><th scope="row">Flower-bed cleanup: hand weeding and loose debris removal</th><td class="price">$75 per hour<small>$75 minimum</small></td></tr>
+            <tr><th scope="row">Mulch spreading in prepared beds — labor only</th><td class="price">$75 per cubic yard<small>$150 minimum</small></td></tr>
+            <tr><th scope="row">Mulch materials and delivery</th><td class="price">Separate</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="fine">
+        <li>Shrub and hedge pruning is not included in the $75 lawn visit. Pruning plus clipping haul-away starts at $75.</li>
+        <li>The $25 haul-away fee covers pruning clippings only. Leaf and other yard-waste hauling is quoted separately by volume.</li>
+        <li>Bed cleanup and preparation is separate from mulch spreading. Mulch materials and delivery are not included in the labor rate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 Lighting -->
+  <section class="price-section" id="lighting" aria-labelledby="lighting-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">02</p><h2 id="lighting-title">Seasonal &amp; decorative lighting installation</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Lighting">Quote lighting</a>
+      </div>
+      <div class="two-col">
+        <div>
+          <p class="lede" style="margin-bottom:18px">Seasonal displays and permanent outdoor lighting, including systems you supply. Seasonal installations can be taken down at the end of the season if you ask; permanent installations stay up.</p>
+          <div class="table-wrap">
+            <table class="prices">
+              <thead><tr><th scope="col">Installation labor</th><th scope="col">Rate</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">First-story footage</th><td class="price">$2.83 per linear foot<small>Base labor rate</small></td></tr>
+                <tr><th scope="row">Second-story footage</th><td class="price">1.5 × base rate<small>Base + 50% of base, on second-story footage only</small></td></tr>
+                <tr><th scope="row">Third-story footage</th><td class="price">2 × base rate<small>Base + 100% of base, on third-story footage only</small></td></tr>
+                <tr><th scope="row">Each additional story</th><td class="price">+50% of base per story</td></tr>
+                <tr><th scope="row">Optional seasonal removal</th><td class="price">75% of installation labor</td></tr>
+                <tr><th scope="row">Lights and other materials</th><td class="price">Separate</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="fine">
+            <li>$2.83/ft base labor; +50% of the base rate per additional story, on that story's footage. First-story footage stays at the base rate on any house.</li>
+            <li>Customer-provided lights are welcome. Billy can recommend lights, but lights and materials are priced separately.</li>
+            <li>Removal is optional, applies to seasonal installations only, and is 75% of the installation labor total (materials excluded).</li>
+            <li>Height and access limits are confirmed during your free estimate.</li>
+          </ul>
+        </div>
+        <form class="calc" id="calc-lighting" aria-labelledby="lc-title" onsubmit="return false">
+          <h3 id="lc-title">Lighting labor estimator</h3>
+          <p class="sub">Enter the feet of lights on each story.</p>
+          <label>First story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="1" value="100" /></label>
+          <label>Second story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="2" value="0" /></label>
+          <label>Third story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="3" value="0" /></label>
+          <label class="check"><input type="checkbox" id="light-removal" /> Add seasonal removal (75% of installation labor)</label>
+          <div class="out" aria-live="polite">
+            <div><span>First story</span><span data-out-story="1">$0.00</span></div>
+            <div><span>Second story</span><span data-out-story="2">$0.00</span></div>
+            <div><span>Third story</span><span data-out-story="3">$0.00</span></div>
+            <div><span>Installation labor</span><span data-out="install">$0.00</span></div>
+            <div><span>Removal</span><span data-out="removal">—</span></div>
+            <div class="total"><span>Estimated labor</span><span data-out="total">$0.00</span></div>
+          </div>
+          <p class="disclaim">Labor only — lights and materials are separate. Your final price is confirmed at the free estimate.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Pressure washing -->
+  <section class="price-section" id="pressure-washing" aria-labelledby="pw-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">03</p><h2 id="pw-title">Pressure washing</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Pressure%20washing">Quote pressure washing</a>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="table-wrap">
+            <table class="prices">
+              <thead><tr><th scope="col">Residential service</th><th scope="col">Price</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Concrete driveway cleaning</th><td class="price">$0.40 per sq. ft.</td></tr>
+                <tr><th scope="row">Concrete sidewalks and walkways</th><td class="price">$0.40 per sq. ft.</td></tr>
+                <tr><th scope="row">Concrete patios and pool decks</th><td class="price">$0.40 per sq. ft.</td></tr>
+                <tr><th scope="row">Wood/composite deck flooring — cleaning only</th><td class="price">$0.50 per sq. ft.</td></tr>
+                <tr><th scope="row">Standard 6-foot privacy fence</th><td class="price">$3 per linear foot, per side</td></tr>
+                <tr><th scope="row">One-story house exterior soft wash</th><td class="price">Starting at $300</td></tr>
+                <tr><th scope="row">Two-story house exterior soft wash</th><td class="price">Starting at $450</td></tr>
+                <tr><th scope="row">Standalone cleaning visit minimum</th><td class="price">$200 per visit</td></tr>
+                <tr><th scope="row">Oil, rust, or paint treatment</th><td class="price">Separate quote</td></tr>
+                <tr><th scope="row">Deck railings and stairs</th><td class="price">Separate quote</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="fine">
+            <li>The $200 minimum applies once per standalone cleaning visit — not to each surface cleaned during that visit.</li>
+            <li>Example: a 600 sq. ft. driveway is $240; a 1,000 sq. ft. driveway is $400.</li>
+            <li>Fence pricing is per side. Deck pricing covers the flooring only; railings and stairs are quoted separately.</li>
+          </ul>
+        </div>
+        <form class="calc" id="calc-wash" aria-labelledby="wc-title" onsubmit="return false">
+          <h3 id="wc-title">Pressure washing estimator</h3>
+          <p class="sub">For one standalone cleaning visit.</p>
+          <label>Concrete: driveway, walks, patio (sq. ft.)<input type="number" min="0" step="1" inputmode="decimal" id="wash-concrete" value="600" /></label>
+          <label>Deck flooring (sq. ft.)<input type="number" min="0" step="1" inputmode="decimal" id="wash-deck" value="0" /></label>
+          <label>Privacy fence (linear ft. × sides)<input type="number" min="0" step="1" inputmode="decimal" id="wash-fence" value="0" /></label>
+          <div class="out" aria-live="polite">
+            <div><span>Concrete</span><span data-out="concrete">$0.00</span></div>
+            <div><span>Deck flooring</span><span data-out="deck">$0.00</span></div>
+            <div><span>Fence</span><span data-out="fence">$0.00</span></div>
+            <div><span>$200 visit minimum</span><span data-out="min">—</span></div>
+            <div class="total"><span>Estimated price</span><span data-out="total">$0.00</span></div>
+          </div>
+          <p class="disclaim">For a 100 ft. fence cleaned on both sides, enter 200. Soft washing, oil/rust/paint treatment, and deck railings or stairs are quoted separately.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Painting -->
+  <section class="price-section" id="painting" aria-labelledby="paint-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">04</p><h2 id="paint-title">Painting</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Painting">Quote painting</a>
+      </div>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th scope="col">Service</th><th scope="col">Labor price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Interior walls</th><td class="price">$2 per sq. ft.<small>Of wall surface</small></td></tr>
+            <tr><th scope="row">Ceilings</th><td class="price">$2 per sq. ft.<small>Of ceiling surface</small></td></tr>
+            <tr><th scope="row">Baseboards and simple trim</th><td class="price">$2 per linear foot</td></tr>
+            <tr><th scope="row">Standard interior door, both sides (frame separate)</th><td class="price">$100 per door</td></tr>
+            <tr><th scope="row">Accessible single-story exterior siding</th><td class="price">Starting at $2.50 per sq. ft.<small>Of painted surface</small></td></tr>
+            <tr><th scope="row">Minimum standalone painting job</th><td class="price">$350</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="fine">
+        <li>Prices assume two coats on surfaces in good condition with basic preparation.</li>
+        <li>Paint and materials are separate. Major repairs, extensive scraping, priming, and difficult access are quoted separately.</li>
+        <li>Wall-surface area is the area of the walls being painted — not the room's floor area.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 Drywall -->
+  <section class="price-section" id="drywall" aria-labelledby="dw-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">05</p><h2 id="dw-title">Drywall</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Drywall">Quote drywall</a>
+      </div>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th scope="col">Service</th><th scope="col">Labor price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Small wall patch, up to 6 inches</th><td class="price">Starting at $150 per patch</td></tr>
+            <tr><th scope="row">Larger wall repair, up to 2 × 2 feet</th><td class="price">Starting at $300 per patch</td></tr>
+            <tr><th scope="row">Standalone drywall repair minimum</th><td class="price">$250 per job</td></tr>
+            <tr><th scope="row">New wall drywall: hang, tape, mud, and sand</th><td class="price">$2.50 per sq. ft.<small>$500 minimum</small></td></tr>
+            <tr><th scope="row">Ceilings, texture matching, demolition, disposal</th><td class="price">Separate quote</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="fine">
+        <li>Materials, primer, and painting are separate. New drywall assumes the existing framing is ready.</li>
+        <li>Minimums replace a lower calculated price; they are not added on top. A standalone small patch therefore starts at the $250 repair minimum.</li>
+        <li>Drywall finishing scope is confirmed during your free estimate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 06 Hardscaping -->
+  <section class="price-section" id="hardscaping" aria-labelledby="hs-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">06</p><h2 id="hs-title">Hardscaping — by estimate</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Hardscaping">Request an estimate</a>
+      </div>
+      <p class="lede">Patios, walkways, retaining walls, and fire pits. Every hardscaping project is different, so scope and pricing are set during an on-site estimate. There are no fixed hardscaping prices.</p>
+    </div>
+  </section>
+
+  <!-- Commercial -->
+  <section class="block" style="padding:56px 0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Commercial or property-management work?</h2>
+          <p>The prices on this page are residential. Commercial properties and property managers receive an on-site assessment and a custom quote.</p>
+        </div>
+        <a class="btn btn-gold" href="quote.html?type=commercial">Request a commercial assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block sand" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="title" id="faq-title">Quick answers</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What's included in a routine lawn visit?</summary><p>Mowing, edging, and lawn trimming. Most average properties are $75 per visit; the price depends on property size. Shrub and hedge pruning is not included.</p></details>
+        <details><summary>When does the overgrown-lawn charge apply?</summary><p>When the grass is 6 inches or higher. Overgrown lawns are 50% more than the normal visit price, so a $75 visit becomes $112.50.</p></details>
+        <details><summary>Is hauling away clippings included with pruning?</summary><p>Clipping haul-away is $25 on top of pruning, which starts at $50, so pruning with haul-away starts at $75. The $25 fee covers pruning clippings only; leaf and other yard-waste hauling is quoted separately by volume.</p></details>
+        <details><summary>Can I supply my own lights?</summary><p>Yes. Customer-provided lights are accepted for seasonal and permanent installations. Billy can also recommend lights. Lights and materials are always priced separately from installation labor.</p></details>
+        <details><summary>How is second- and third-story lighting priced?</summary><p>Installation labor is $2.83 per linear foot at the base rate. Each story above the first adds 50% of the base rate, applied only to the footage installed on that story — second-story footage is 1.5 times the base rate, third-story footage is 2 times. First-story footage stays at the base rate.</p></details>
+        <details><summary>Do you take seasonal lights down?</summary><p>Yes, on request. Seasonal removal is 75% of the installation labor total, not including lights or materials. For example, 100 feet of first-story lights is $283.00 to install and $212.25 to remove.</p></details>
+        <details><summary>Do you work on commercial properties?</summary><p>Yes — small commercial properties and property managers are welcome. Commercial and property-management work requires an on-site assessment and a custom quote; the published prices apply to residential work.</p></details>
+        <details><summary>Are estimates free?</summary><p>Yes. Request one by phone, text, or email, or use the quote form.</p></details>
+        <details><summary>Do you require a deposit?</summary><p>Jobs over $1,000 require a 25% deposit, applied toward the total. The remaining balance is due on completion. See our <a href="policies.html">policies</a> for cancellation and rescheduling details.</p></details>
+        <details><summary>What payment methods do you accept?</summary><p>Cash, Cash App, Venmo, PayPal, card, and check.</p></details>
+      </div>
+    </div>
+  </section>
+</main>

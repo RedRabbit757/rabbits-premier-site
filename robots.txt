@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# OAI-SearchBot (ChatGPT search) is allowed by the rule above.
+Sitemap: https://rabbits-premier.com/sitemap.xml
