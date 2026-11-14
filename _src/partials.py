@@ -67,8 +67,8 @@ CONTACT_STRIP = """<section class="contact-strip" aria-labelledby="contact-title
       <p>Call, text, or email Billy for a free estimate. Open every day, 6 a.m.–6 p.m. Eastern.</p>
     </div>
     <div class="contact-actions">
-      <a class="big" href="tel:+17574102347"><span><small>Call</small>757-410-2347</span><span aria-hidden="true">→</span></a>
-      <a class="big" href="sms:+17574102347"><span><small>Text</small>757-410-2347</span><span aria-hidden="true">→</span></a>
+      <a class="big" href="tel:+19489007254"><span><small>Call</small>948-900-7254</span><span aria-hidden="true">→</span></a>
+      <a class="big" href="sms:+19489007254"><span><small>Text</small>948-900-7254</span><span aria-hidden="true">→</span></a>
       <a class="big" href="mailto:rabbits.premier@gmail.com"><span><small>Email</small>rabbits.premier@gmail.com</span><span aria-hidden="true">→</span></a>
     </div>
   </div>
@@ -88,7 +88,7 @@ def footer(scripts='<script src="site.js"></script>'):
         <h3>Contact</h3>
         <ul>
           <li>Owner: Billy C. Hernandez</li>
-          <li><a href="tel:+17574102347">Call or text: 757-410-2347</a></li>
+          <li><a href="tel:+19489007254">Call or text: 948-900-7254</a></li>
           <li><a href="mailto:rabbits.premier@gmail.com">rabbits.premier@gmail.com</a></li>
           <li>900 Commonwealth Pl, Suite 200<br />Virginia Beach, VA 23464</li>
         </ul>
@@ -122,8 +122,8 @@ def footer(scripts='<script src="site.js"></script>'):
   </div>
 </footer>
 <nav class="callbar" aria-label="Quick contact">
-  <a href="tel:+17574102347">Call</a>
-  <a href="sms:+17574102347">Text</a>
+  <a href="tel:+19489007254">Call</a>
+  <a href="sms:+19489007254">Text</a>
   <a class="q" href="quote.html">Free quote</a>
 </nav>
 {scripts}
@@ -141,7 +141,7 @@ BUSINESS_LD = """<script type="application/ld+json">
   "logo": "https://rabbits-premier.com/img/crest.png",
   "image": "https://rabbits-premier.com/img/crest.png",
   "description": "Owner-operated residential property care: lawn care and yard cleanup, seasonal and decorative lighting installation, pressure washing, painting, and drywall repair. Commercial properties by on-site assessment and custom quote.",
-  "telephone": "+1-757-410-2347",
+  "telephone": "+1-948-900-7254",
   "email": "rabbits.premier@gmail.com",
   "address": {
     "@type": "PostalAddress",
