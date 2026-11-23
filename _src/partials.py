@@ -67,8 +67,8 @@ CONTACT_STRIP = """<section class="contact-strip" aria-labelledby="contact-title
       <p>Call, text, or email Billy for a free estimate. Open every day, 6 a.m.–6 p.m. Eastern.</p>
     </div>
     <div class="contact-actions">
-      <a class="big" href="tel:+19489007254"><span><small>Call</small>948-900-7254</span><span aria-hidden="true">→</span></a>
-      <a class="big" href="sms:+19489007254"><span><small>Text</small>948-900-7254</span><span aria-hidden="true">→</span></a>
+      <a class="big" href="tel:+17577658212"><span><small>Call</small>757-765-8212</span><span aria-hidden="true">→</span></a>
+      <a class="big" href="sms:+17577658212"><span><small>Text</small>757-765-8212</span><span aria-hidden="true">→</span></a>
       <a class="big" href="mailto:rabbits.premier@gmail.com"><span><small>Email</small>rabbits.premier@gmail.com</span><span aria-hidden="true">→</span></a>
     </div>
   </div>
@@ -88,7 +88,7 @@ def footer(scripts='<script src="site.js"></script>'):
         <h3>Contact</h3>
         <ul>
           <li>Owner: Billy C. Hernandez</li>
-          <li><a href="tel:+19489007254">Call or text: 948-900-7254</a></li>
+          <li><a href="tel:+17577658212">Call or text: 757-765-8212</a></li>
           <li><a href="mailto:rabbits.premier@gmail.com">rabbits.premier@gmail.com</a></li>
           <li>900 Commonwealth Pl, Suite 200<br />Virginia Beach, VA 23464</li>
         </ul>
@@ -122,8 +122,8 @@ def footer(scripts='<script src="site.js"></script>'):
   </div>
 </footer>
 <nav class="callbar" aria-label="Quick contact">
-  <a href="tel:+19489007254">Call</a>
-  <a href="sms:+19489007254">Text</a>
+  <a href="tel:+17577658212">Call</a>
+  <a href="sms:+17577658212">Text</a>
   <a class="q" href="quote.html">Free quote</a>
 </nav>
 {scripts}
@@ -170,7 +170,7 @@ _LD = {
                          "pressure washing, painting, drywall repair, and hardscaping by estimate. Commercial properties by "
                          "on-site assessment and custom quote. Formerly Rabbit's Lawn & Garden Care. Insured. Free estimates."),
          "founder": {"@id": _SITE + "#owner"},
-         "telephone": "+1-948-900-7254",
+         "telephone": "+1-757-765-8212",
          "email": "rabbits.premier@gmail.com",
          "address": {"@type": "PostalAddress", "streetAddress": "900 Commonwealth Pl, Suite 200",
                      "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23464",
