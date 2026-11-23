@@ -59,7 +59,15 @@ for fname, title, desc, extra, scripts, strip_contact in PAGES:
         f.write(out)
     print("wrote", fname)
 
-urls = "\n".join(f"  <url><loc>{page_url(p[0])}</loc></url>" for p in PAGES)
+import datetime
+today = datetime.date.today().isoformat()
+urls = "\n".join(f"  <url><loc>{page_url(p[0])}</loc><lastmod>{today}</lastmod></url>" for p in PAGES)
 with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8", newline="\n") as f:
     f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n')
 print("wrote sitemap.xml")
+
+# llms.txt: the plain-text summary AI assistants read (GEO audit 2026-11-22). Edit _src/llms.txt, not the copy.
+with open(os.path.join(HERE, "llms.txt"), encoding="utf-8") as src, \
+        open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8", newline="\n") as dst:
+    dst.write(src.read())
+print("wrote llms.txt")

@@ -22,38 +22,253 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": "https://rabbits-premier.com/#business",
-  "name": "Rabbit's Premier Property Care",
-  "url": "https://rabbits-premier.com/",
-  "logo": "https://rabbits-premier.com/img/crest.png",
-  "image": "https://rabbits-premier.com/img/crest.png",
-  "description": "Owner-operated residential property care: lawn care and yard cleanup, seasonal and decorative lighting installation, pressure washing, painting, and drywall repair. Commercial properties by on-site assessment and custom quote.",
-  "telephone": "+1-948-900-7254",
-  "email": "rabbits.premier@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "900 Commonwealth Pl, Suite 200",
-    "addressLocality": "Virginia Beach",
-    "addressRegion": "VA",
-    "postalCode": "23464",
-    "addressCountry": "US"
-  },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "06:00",
-    "closes": "18:00"
-  }],
-  "areaServed": [
-    {"@type": "City", "name": "Portsmouth", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Norfolk", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Chesapeake", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Virginia Beach", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Suffolk", "containedInPlace": {"@type": "State", "name": "Virginia"}}
-  ],
-  "paymentAccepted": "Cash, Cash App, Venmo, PayPal, Credit Card, Check",
-  "currenciesAccepted": "USD"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rabbits-premier.com/#website",
+      "url": "https://rabbits-premier.com/",
+      "name": "Rabbit's Premier Property Care",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://rabbits-premier.com/#business"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rabbits-premier.com/#owner",
+      "name": "Billy C. Hernandez",
+      "jobTitle": "Owner and Operator",
+      "url": "https://rabbits-premier.com/about.html",
+      "worksFor": {
+        "@id": "https://rabbits-premier.com/#business"
+      },
+      "knowsAbout": [
+        "Lawn care",
+        "Yard cleanup",
+        "Seasonal and decorative lighting installation",
+        "Pressure washing",
+        "Painting",
+        "Drywall repair",
+        "Hardscaping"
+      ]
+    },
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://rabbits-premier.com/#business",
+      "name": "Rabbit's Premier Property Care",
+      "alternateName": "Rabbit's Lawn & Garden Care",
+      "url": "https://rabbits-premier.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rabbits-premier.com/img/crest.png",
+        "width": 1024,
+        "height": 993
+      },
+      "image": [
+        "https://rabbits-premier.com/img/crest.png",
+        "https://rabbits-premier.com/img/work/P12-1000004078.jpg",
+        "https://rabbits-premier.com/img/work/P11-1000004094.jpg",
+        "https://rabbits-premier.com/img/work/P2-1000002238.jpg"
+      ],
+      "description": "Owner-operated residential property care in Portsmouth, Norfolk, Chesapeake, Virginia Beach, and Suffolk, Virginia: lawn care and yard cleanup, seasonal and decorative lighting installation, pressure washing, painting, drywall repair, and hardscaping by estimate. Commercial properties by on-site assessment and custom quote. Formerly Rabbit's Lawn & Garden Care. Insured. Free estimates.",
+      "founder": {
+        "@id": "https://rabbits-premier.com/#owner"
+      },
+      "telephone": "+1-948-900-7254",
+      "email": "rabbits.premier@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "900 Commonwealth Pl, Suite 200",
+        "addressLocality": "Virginia Beach",
+        "addressRegion": "VA",
+        "postalCode": "23464",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "06:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Portsmouth",
+          "sameAs": "https://en.wikipedia.org/wiki/Portsmouth,_Virginia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Norfolk",
+          "sameAs": "https://en.wikipedia.org/wiki/Norfolk,_Virginia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chesapeake",
+          "sameAs": "https://en.wikipedia.org/wiki/Chesapeake,_Virginia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Virginia Beach",
+          "sameAs": "https://en.wikipedia.org/wiki/Virginia_Beach,_Virginia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Suffolk",
+          "sameAs": "https://en.wikipedia.org/wiki/Suffolk,_Virginia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        }
+      ],
+      "priceRange": "Lawn visits from $75; published residential rates",
+      "paymentAccepted": "Cash, Cash App, Venmo, PayPal, Credit Card, Check",
+      "currenciesAccepted": "USD",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Residential services and published prices",
+        "url": "https://rabbits-premier.com/services.html",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Routine lawn maintenance: mowing, edging, and trimming",
+              "serviceType": "Lawn care"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "UnitPriceSpecification",
+              "price": 75,
+              "unitText": "per visit (most average properties; size-dependent)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Leaf cleanup: raking/blowing and bagging",
+              "serviceType": "Yard cleanup"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "PriceSpecification",
+              "minPrice": 150,
+              "description": "Starting at $150 per visit"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Seasonal and decorative lighting installation",
+              "serviceType": "Outdoor lighting installation"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "UnitPriceSpecification",
+              "price": 2.83,
+              "unitCode": "FOT",
+              "unitText": "per linear foot, first-story labor; +50% of base per additional story; lights and materials separate"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Concrete pressure washing: driveways, walkways, patios",
+              "serviceType": "Pressure washing"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "UnitPriceSpecification",
+              "price": 0.4,
+              "unitCode": "FTK",
+              "unitText": "per sq. ft.; $200 standalone visit minimum"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "House exterior soft wash",
+              "serviceType": "Pressure washing"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "PriceSpecification",
+              "minPrice": 300,
+              "description": "One-story from $300; two-story from $450"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interior painting: walls and ceilings",
+              "serviceType": "House painting"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "UnitPriceSpecification",
+              "price": 2,
+              "unitCode": "FTK",
+              "unitText": "per sq. ft. of painted surface, labor only; $350 job minimum"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Drywall repair",
+              "serviceType": "Drywall repair"
+            },
+            "priceSpecification": {
+              "priceCurrency": "USD",
+              "@type": "PriceSpecification",
+              "minPrice": 250,
+              "description": "Standalone repair minimum $250; new drywall $2.50 per sq. ft., $500 minimum"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardscaping: patios, walkways, retaining walls, fire pits",
+              "serviceType": "Hardscaping"
+            },
+            "description": "Scope and price set at an on-site estimate."
+          }
+        ]
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -130,8 +345,8 @@
     <div class="wrap">
       <div class="head reveal">
         <p class="eyebrow">Services</p>
-        <h2 class="title" id="svc-title">Everything outside, <em>and a little inside.</em></h2>
-        <p class="lede">Residential prices are published in full. Commercial and property-management work is quoted after an on-site assessment.</p>
+        <h2 class="title" id="svc-title">What does property care cost in <em>Hampton Roads?</em></h2>
+        <p class="lede">Rabbit's Premier Property Care, an owner-operated business in Virginia Beach, charges $75 per routine lawn visit, $0.40 per sq. ft. for concrete pressure washing, and $2.83 per linear foot for lighting installation. Residential prices are published in full; commercial and property-management work is quoted after an on-site assessment.</p>
       </div>
       <div class="grid cols-4">
         <article class="card reveal">

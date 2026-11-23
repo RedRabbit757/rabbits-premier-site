@@ -131,41 +131,91 @@ def footer(scripts='<script src="site.js"></script>'):
 </html>
 """
 
-BUSINESS_LD = """<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": "https://rabbits-premier.com/#business",
-  "name": "Rabbit's Premier Property Care",
-  "url": "https://rabbits-premier.com/",
-  "logo": "https://rabbits-premier.com/img/crest.png",
-  "image": "https://rabbits-premier.com/img/crest.png",
-  "description": "Owner-operated residential property care: lawn care and yard cleanup, seasonal and decorative lighting installation, pressure washing, painting, and drywall repair. Commercial properties by on-site assessment and custom quote.",
-  "telephone": "+1-948-900-7254",
-  "email": "rabbits.premier@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "900 Commonwealth Pl, Suite 200",
-    "addressLocality": "Virginia Beach",
-    "addressRegion": "VA",
-    "postalCode": "23464",
-    "addressCountry": "US"
-  },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "06:00",
-    "closes": "18:00"
-  }],
-  "areaServed": [
-    {"@type": "City", "name": "Portsmouth", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Norfolk", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Chesapeake", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Virginia Beach", "containedInPlace": {"@type": "State", "name": "Virginia"}},
-    {"@type": "City", "name": "Suffolk", "containedInPlace": {"@type": "State", "name": "Virginia"}}
-  ],
-  "paymentAccepted": "Cash, Cash App, Venmo, PayPal, Credit Card, Check",
-  "currenciesAccepted": "USD"
+# Structured data for the homepage (GEO audit 2026-11-22). Built as a dict so it is always valid JSON.
+# Add the Google Business Profile, Bing Places, Angi, Facebook, Nextdoor and Yelp URLs to "sameAs" once they exist;
+# add "geo" from the verified Google pin. Never put placeholder values in here.
+_SITE = "https://rabbits-premier.com/"
+_BIZ = _SITE + "#business"
+
+
+def _city(name):
+    slug = name.replace(" ", "_") + ",_Virginia"
+    return {"@type": "City", "name": name, "sameAs": "https://en.wikipedia.org/wiki/" + slug,
+            "containedInPlace": {"@type": "State", "name": "Virginia"}}
+
+
+def _offer(name, service_type, spec):
+    return {"@type": "Offer", "itemOffered": {"@type": "Service", "name": name, "serviceType": service_type},
+            "priceSpecification": dict({"priceCurrency": "USD"}, **spec)}
+
+
+_LD = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {"@type": "WebSite", "@id": _SITE + "#website", "url": _SITE, "name": "Rabbit's Premier Property Care",
+         "inLanguage": "en-US", "publisher": {"@id": _BIZ}},
+        {"@type": "Person", "@id": _SITE + "#owner", "name": "Billy C. Hernandez", "jobTitle": "Owner and Operator",
+         "url": _SITE + "about.html", "worksFor": {"@id": _BIZ},
+         "knowsAbout": ["Lawn care", "Yard cleanup", "Seasonal and decorative lighting installation", "Pressure washing",
+                        "Painting", "Drywall repair", "Hardscaping"]},
+        {"@type": "HomeAndConstructionBusiness", "@id": _BIZ,
+         "name": "Rabbit's Premier Property Care",
+         "alternateName": "Rabbit's Lawn & Garden Care",
+         "url": _SITE,
+         "logo": {"@type": "ImageObject", "url": _SITE + "img/crest.png", "width": 1024, "height": 993},
+         "image": [_SITE + "img/crest.png", _SITE + "img/work/P12-1000004078.jpg",
+                   _SITE + "img/work/P11-1000004094.jpg", _SITE + "img/work/P2-1000002238.jpg"],
+         "description": ("Owner-operated residential property care in Portsmouth, Norfolk, Chesapeake, Virginia Beach, and "
+                         "Suffolk, Virginia: lawn care and yard cleanup, seasonal and decorative lighting installation, "
+                         "pressure washing, painting, drywall repair, and hardscaping by estimate. Commercial properties by "
+                         "on-site assessment and custom quote. Formerly Rabbit's Lawn & Garden Care. Insured. Free estimates."),
+         "founder": {"@id": _SITE + "#owner"},
+         "telephone": "+1-948-900-7254",
+         "email": "rabbits.premier@gmail.com",
+         "address": {"@type": "PostalAddress", "streetAddress": "900 Commonwealth Pl, Suite 200",
+                     "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23464",
+                     "addressCountry": "US"},
+         "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
+                                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                                                      "Saturday", "Sunday"],
+                                        "opens": "06:00", "closes": "18:00"}],
+         "areaServed": [_city(c) for c in ("Portsmouth", "Norfolk", "Chesapeake", "Virginia Beach", "Suffolk")],
+         "priceRange": "Lawn visits from $75; published residential rates",
+         "paymentAccepted": "Cash, Cash App, Venmo, PayPal, Credit Card, Check",
+         "currenciesAccepted": "USD",
+         "hasOfferCatalog": {
+             "@type": "OfferCatalog", "name": "Residential services and published prices",
+             "url": _SITE + "services.html",
+             "itemListElement": [
+                 _offer("Routine lawn maintenance: mowing, edging, and trimming", "Lawn care",
+                        {"@type": "UnitPriceSpecification", "price": 75,
+                         "unitText": "per visit (most average properties; size-dependent)"}),
+                 _offer("Leaf cleanup: raking/blowing and bagging", "Yard cleanup",
+                        {"@type": "PriceSpecification", "minPrice": 150, "description": "Starting at $150 per visit"}),
+                 _offer("Seasonal and decorative lighting installation", "Outdoor lighting installation",
+                        {"@type": "UnitPriceSpecification", "price": 2.83, "unitCode": "FOT",
+                         "unitText": "per linear foot, first-story labor; +50% of base per additional story; lights and materials separate"}),
+                 _offer("Concrete pressure washing: driveways, walkways, patios", "Pressure washing",
+                        {"@type": "UnitPriceSpecification", "price": 0.40, "unitCode": "FTK",
+                         "unitText": "per sq. ft.; $200 standalone visit minimum"}),
+                 _offer("House exterior soft wash", "Pressure washing",
+                        {"@type": "PriceSpecification", "minPrice": 300,
+                         "description": "One-story from $300; two-story from $450"}),
+                 _offer("Interior painting: walls and ceilings", "House painting",
+                        {"@type": "UnitPriceSpecification", "price": 2, "unitCode": "FTK",
+                         "unitText": "per sq. ft. of painted surface, labor only; $350 job minimum"}),
+                 _offer("Drywall repair", "Drywall repair",
+                        {"@type": "PriceSpecification", "minPrice": 250,
+                         "description": "Standalone repair minimum $250; new drywall $2.50 per sq. ft., $500 minimum"}),
+                 {"@type": "Offer", "itemOffered": {"@type": "Service",
+                                                    "name": "Hardscaping: patios, walkways, retaining walls, fire pits",
+                                                    "serviceType": "Hardscaping"},
+                  "description": "Scope and price set at an on-site estimate."},
+             ]},
+         },
+    ],
 }
-</script>
-"""
+
+import json as _json
+BUSINESS_LD = ('<script type="application/ld+json">\n' + _json.dumps(_LD, indent=2, ensure_ascii=False)
+               + "\n</script>\n")

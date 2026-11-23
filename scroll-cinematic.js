@@ -12,25 +12,39 @@ function initScrub(cfg) {
   const loader  = section.querySelector(".loader");
   const bgFill  = cfg.bg || "#0b1a12";
   const images = [];
-  let loaded = 0, started = false, current = -1;
+  let loaded = 0, total = 0, started = false, current = -1;
+
+  // Lighter on phones (GEO audit 2026-11-22): small screens and Save-Data get every 2nd frame,
+  // reduced motion gets only the first frame (a still poster). draw() already falls back to the
+  // nearest loaded frame, so skipped frames never show as blanks.
+  const conn = navigator.connection || {};
+  const stillOnly = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const step = (window.innerWidth < 768 || conn.saveData) ? 2 : 1;
+
+  function load(i) {
+    if (images[i]) return;
+    total++;
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = img.onerror = () => {
+      loaded++;
+      if (i === 0 || current < 0) draw(Math.max(current, 0));
+      if (loader) {
+        loader.textContent = `Loading ${Math.round((loaded / total) * 100)}%`;
+        if (started && loaded === total) loader.style.opacity = "0";
+      }
+    };
+    img.src = cfg.framePath(i + 1);
+    images[i] = img;
+  }
 
   function preload() {
     if (started) return;
     started = true;
-    for (let i = 0; i < cfg.frameCount; i++) {
-      const img = new Image();
-      img.decoding = "async";
-      img.onload = img.onerror = () => {
-        loaded++;
-        if (i === 0 || current < 0) draw(Math.max(current, 0));
-        if (loader) {
-          loader.textContent = `Loading ${Math.round((loaded / cfg.frameCount) * 100)}%`;
-          if (loaded === cfg.frameCount) loader.style.opacity = "0";
-        }
-      };
-      img.src = cfg.framePath(i + 1);
-      images[i] = img;
-    }
+    load(0);
+    if (stillOnly) { if (loader) loader.style.opacity = "0"; return; }
+    for (let i = step; i < cfg.frameCount; i += step) load(i);
+    load(cfg.frameCount - 1);                       // always have the last frame for the end of the scrub
   }
 
   function draw(index) {
@@ -57,7 +71,7 @@ function initScrub(cfg) {
 
   function update() {
     const rect = section.getBoundingClientRect();
-    if (!started && rect.top < window.innerHeight * 2.5) preload();
+    if (!started && cfg.lazy && rect.top < window.innerHeight * 2.5) preload();
     if (rect.bottom < -window.innerHeight || rect.top > window.innerHeight) return;
     const scrollable = rect.height - window.innerHeight;
     const p = Math.min(Math.max(-rect.top / scrollable, 0), 1);
@@ -84,7 +98,15 @@ function initScrub(cfg) {
     }
   }
 
-  if (!cfg.lazy) preload();
+  if (!cfg.lazy) {
+    // The first frame shows at once (it is also preloaded in <head>); the rest wait until the page
+    // is idle or the visitor starts scrolling, so they don't compete with the first paint.
+    load(0);
+    const go = () => { window.removeEventListener("scroll", go); preload(); };
+    window.addEventListener("scroll", go, { passive: true, once: true });
+    if ("requestIdleCallback" in window) requestIdleCallback(go, { timeout: 2500 });
+    else setTimeout(go, 1500);
+  }
   window.addEventListener("resize", resize);
   resize();
   return { update, resize };
