@@ -1,0 +1,104 @@
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Lighting cost guide</p>
+      <h1>How much does Christmas light installation cost in <em>Hampton Roads?</em></h1>
+      <p>At Rabbit's Premier Property Care, Christmas and holiday light installation labor is <strong>$2.83 per linear foot</strong> on the first story. Second-story footage is 1.5 times that rate and third-story footage is 2 times. Taking seasonal lights down afterwards is optional and costs 75% of the installation labor. Lights and materials are priced separately, and you're welcome to supply your own. So 100 feet of first-story lights is $283.00 to install, or $495.25 with removal at the end of the season. Prices current as of November 2026, for homes in Portsmouth, Norfolk, Chesapeake, Virginia Beach, and Suffolk, Virginia.</p>
+      <div class="jump">
+        <a href="#rates">The rates</a>
+        <a href="#examples">Worked examples</a>
+        <a href="#estimator">Estimate yours</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="price-section" id="rates" aria-labelledby="rates-title">
+    <div class="wrap">
+      <div class="price-head">
+        <div><p class="num">01</p><h2 id="rates-title">Installation labor rates</h2></div>
+        <a class="btn btn-forest" href="quote.html?service=Lighting">Get a free lighting estimate</a>
+      </div>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th scope="col">What you pay for</th><th scope="col">Rate</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">First-story footage</th><td class="price">$2.83 per linear foot<small>Base labor rate</small></td></tr>
+            <tr><th scope="row">Second-story footage</th><td class="price">$4.245 per linear foot<small>1.5 × base: base + 50% of base, on second-story footage only</small></td></tr>
+            <tr><th scope="row">Third-story footage</th><td class="price">$5.66 per linear foot<small>2 × base: base + 100% of base, on third-story footage only</small></td></tr>
+            <tr><th scope="row">Each additional story</th><td class="price">+50% of base per story</td></tr>
+            <tr><th scope="row">Optional seasonal removal</th><td class="price">75% of installation labor<small>Seasonal installations only; materials excluded</small></td></tr>
+            <tr><th scope="row">Lights and other materials</th><td class="price">Separate<small>Customer-provided lights are welcome</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="fine">
+        <li>First-story footage stays at the base rate on any house. The higher rates apply only to the footage on the upper stories.</li>
+        <li>The rates cover both seasonal displays and permanent outdoor lighting, including lighting systems you supply.</li>
+        <li>Height and access limits are confirmed during your free estimate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="examples" aria-labelledby="ex-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Worked examples</p>
+        <h2 class="title" id="ex-title">What real roofline jobs <em>cost in labor.</em></h2>
+        <p class="lede">Each example uses only the published rates above. Lights and materials are extra in every case.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>One-story roofline, seasonal</h3><p>100 ft on the first story: <strong>$283.00</strong> to install. Removal after the season: <strong>$212.25</strong> (75% of $283.00). Season total: <strong>$495.25</strong> in labor.</p></div>
+        <div class="card reveal"><h3>Two-story home, seasonal</h3><p>100 ft on the first story ($283.00) plus 40 ft on the second story at $4.245/ft ($169.80): <strong>$452.80</strong> to install. Removal: <strong>$339.60</strong>. Season total: <strong>$792.40</strong>.</p></div>
+        <div class="card reveal"><h3>Permanent lighting, one story</h3><p>150 ft of permanent lighting on the first story: <strong>$424.50</strong> to install. Permanent installations stay up, so there's no removal charge.</p></div>
+      </div>
+      <p class="note">A third-story run is 2 × the base rate: 60 ft on a third story is $339.60 in labor.</p>
+    </div>
+  </section>
+
+  <section class="price-section" id="estimator" aria-labelledby="lc-title">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Estimate yours</p>
+          <h2 class="title">Measure your roofline, <em>then enter the feet.</em></h2>
+          <p class="lede">Count the linear feet of lights you want on each story: along the gutters, up and down the gables, around windows. Enter them, and the estimator applies the published rates. Your final price is confirmed at the free estimate.</p>
+        </div>
+        <form class="calc" id="calc-lighting" aria-labelledby="lc-title" onsubmit="return false">
+          <h3 id="lc-title">Lighting labor estimator</h3>
+          <p class="sub">Enter the feet of lights on each story.</p>
+          <label>First story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="1" value="100" /></label>
+          <label>Second story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="2" value="0" /></label>
+          <label>Third story (ft)<input type="number" min="0" step="1" inputmode="decimal" data-story="3" value="0" /></label>
+          <label class="check"><input type="checkbox" id="light-removal" /> Add seasonal removal (75% of installation labor)</label>
+          <div class="out" aria-live="polite">
+            <div><span>First story</span><span data-out-story="1">$0.00</span></div>
+            <div><span>Second story</span><span data-out-story="2">$0.00</span></div>
+            <div><span>Third story</span><span data-out-story="3">$0.00</span></div>
+            <div><span>Installation labor</span><span data-out="install">$0.00</span></div>
+            <div><span>Removal</span><span data-out="removal">—</span></div>
+            <div class="total"><span>Estimated labor</span><span data-out="total">$0.00</span></div>
+          </div>
+          <p class="disclaim">Labor only: lights and materials are separate. Your final price is confirmed at the free estimate.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="block sand" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="title" id="faq-title">Christmas light installation: <em>quick answers</em></h2>
+      </div>
+      <div class="faq">
+        <details><summary>How much does Christmas light installation cost in Virginia Beach?</summary><p>At Rabbit's Premier Property Care, installation labor is $2.83 per linear foot on the first story, 1.5 times that on the second story and 2 times on the third. 100 feet of first-story lights is $283.00 in labor. Lights and materials are separate. The same rates apply in Portsmouth, Norfolk, Chesapeake, Virginia Beach, and Suffolk.</p></details>
+        <details><summary>How much does it cost to take Christmas lights down?</summary><p>Seasonal removal is optional and costs 75% of the installation labor total, not including lights or materials. For example, 100 feet of first-story lights is $283.00 to install and $212.25 to remove.</p></details>
+        <details><summary>Can I supply my own lights?</summary><p>Yes. Rabbit's Premier Property Care installs customer-provided lights for both seasonal and permanent installations. Billy can also recommend lights. Lights and materials are always priced separately from installation labor.</p></details>
+        <details><summary>Do you install permanent outdoor lighting?</summary><p>Yes. Permanent outdoor lighting is installed at the same labor rates as seasonal displays, and permanent installations stay up, so there is no removal charge.</p></details>
+        <details><summary>How is second- and third-story lighting priced?</summary><p>Each story above the first adds 50% of the $2.83 base rate, applied only to the footage on that story: $4.245 per foot on the second story and $5.66 per foot on the third. First-story footage stays at $2.83 per linear foot on any house.</p></details>
+        <details><summary>Is the estimate free?</summary><p>Yes. Request one by phone or text at 948-900-7254, by email, or with the quote form. Height and access limits are confirmed during the free estimate.</p></details>
+      </div>
+    </div>
+  </section>
+</main>

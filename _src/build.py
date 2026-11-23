@@ -34,6 +34,9 @@ PAGES = [
     ("policies.html", "Policies | Rabbit's Premier Property Care",
      "Deposit, cancellation, rescheduling, and satisfaction promise policies for Rabbit's Premier Property Care.",
      "", None, True),
+    ("lighting-cost.html", "Christmas Light Installation Cost in Hampton Roads, VA",
+     "Christmas and holiday light installation costs $2.83 per linear foot (first story) at Rabbit's Premier Property Care, with removal at 75% of labor. Worked examples and an estimator.",
+     "", None, True),
     ("quote.html", "Request a Free Quote | Rabbit's Premier Property Care",
      "Request a free estimate for lawn care, lighting, pressure washing, painting, drywall, or hardscaping. Commercial properties receive an on-site assessment and custom quote.",
      "", None, False),
@@ -49,7 +52,7 @@ def faq_ld(body):
 for fname, title, desc, extra, scripts, strip_contact in PAGES:
     with open(os.path.join(HERE, "pages", fname), encoding="utf-8") as f:
         body = f.read()
-    if fname == "services.html":
+    if fname in ("services.html", "lighting-cost.html"):
         extra += faq_ld(body)
     out = head(html.escape(title, quote=True), html.escape(desc, quote=True), extra, fname) + header(fname) + body
     if strip_contact:
