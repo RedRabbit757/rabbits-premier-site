@@ -34,6 +34,9 @@ PAGES = [
     ("policies.html", "Policies | Rabbit's Premier Property Care",
      "Deposit, cancellation, rescheduling, and satisfaction promise policies for Rabbit's Premier Property Care.",
      "", None, True),
+    ("lawn-care-cost.html", "Lawn Care Cost in Virginia Beach & Hampton Roads, VA",
+     "Lawn care costs $75 per visit for most average properties at Rabbit's Premier Property Care in Virginia Beach, Chesapeake, Norfolk, Suffolk, and Portsmouth. Overgrown, pruning, leaf cleanup, and mulch prices with worked examples.",
+     "", None, True),
     ("lighting-cost.html", "Christmas Light Installation Cost in Hampton Roads, VA",
      "Christmas and holiday light installation costs $2.83 per linear foot (first story) at Rabbit's Premier Property Care, with removal at 75% of labor. Worked examples and an estimator.",
      "", None, True),
@@ -55,7 +58,7 @@ def faq_ld(body):
 for fname, title, desc, extra, scripts, strip_contact in PAGES:
     with open(os.path.join(HERE, "pages", fname), encoding="utf-8") as f:
         body = f.read()
-    if fname in ("services.html", "lighting-cost.html", "pressure-washing-cost.html"):
+    if fname in ("services.html", "lawn-care-cost.html", "lighting-cost.html", "pressure-washing-cost.html"):
         extra += faq_ld(body)
     out = head(html.escape(title, quote=True), html.escape(desc, quote=True), extra, fname) + header(fname) + body
     if strip_contact:

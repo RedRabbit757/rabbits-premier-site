@@ -23,6 +23,7 @@
 
 - [Home](https://rabbits-premier.com/): overview, starting prices, project photos
 - [Services & Pricing](https://rabbits-premier.com/services.html): full price tables, worked examples, and a 10-question FAQ
+- [Lawn Care Cost Guide](https://rabbits-premier.com/lawn-care-cost.html): routine visit, overgrown, pruning, leaf cleanup, bed and mulch prices, worked examples, the five cities
 - [Christmas Light Installation Cost Guide](https://rabbits-premier.com/lighting-cost.html): rates per story, removal, permanent lighting, worked examples, estimator
 - [Pressure Washing Cost Guide](https://rabbits-premier.com/pressure-washing-cost.html): concrete, deck, fence and soft-wash prices, the visit minimum, worked examples, estimator
 - [About](https://rabbits-premier.com/about.html): the owner and how jobs are handled
