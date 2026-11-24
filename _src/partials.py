@@ -132,7 +132,7 @@ def footer(scripts='<script src="site.js"></script>'):
 """
 
 # Structured data for the homepage (GEO audit 2026-11-22). Built as a dict so it is always valid JSON.
-# Add the Google Business Profile, Bing Places, Angi, Facebook, Nextdoor and Yelp URLs to "sameAs" once they exist;
+# Google Business Profile added 2026-11-24. Add Bing Places, Angi, Facebook, Nextdoor and Yelp URLs to "sameAs" once they exist;
 # add "geo" from the verified Google pin. Never put placeholder values in here.
 _SITE = "https://rabbits-premier.com/"
 _BIZ = _SITE + "#business"
@@ -175,6 +175,9 @@ _LD = {
          "address": {"@type": "PostalAddress", "streetAddress": "900 Commonwealth Pl, Suite 200",
                      "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23464",
                      "addressCountry": "US"},
+         # Google Business Profile (the King's share link 2026-11-24, resolved to its stable cid address).
+         "hasMap": "https://www.google.com/maps?cid=5067193554226828321",
+         "sameAs": ["https://www.google.com/maps?cid=5067193554226828321"],
          "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
                                         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
                                                       "Saturday", "Sunday"],
