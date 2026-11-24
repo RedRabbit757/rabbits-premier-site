@@ -20,7 +20,7 @@ def head(title, description, extra="", fname="index.html"):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="msvalidate.01" content="1C28F9861F359751F5F616C6C31BF697" />
+  <meta name="msvalidate.01" content="1C28F9B61F359751F5F616C6C31BF697" />
   <title>{title}</title>
   <meta name="description" content="{description}" />
   <meta name="theme-color" content="#0f2419" />
