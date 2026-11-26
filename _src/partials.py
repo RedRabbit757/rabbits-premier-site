@@ -21,6 +21,7 @@ def head(title, description, extra="", fname="index.html"):
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="msvalidate.01" content="1C28F9B61F359751F5F616C6C31BF697" />
+  <meta name="google-site-verification" content="3wctahLesnHhVdONO4BcfEW33VUl5fSg1aL9uk0p-Nc" />
   <title>{title}</title>
   <meta name="description" content="{description}" />
   <meta name="theme-color" content="#0f2419" />
